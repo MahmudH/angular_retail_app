@@ -1,0 +1,33 @@
+<section ng-repeat="card in cardCtrl.cards | orderBy: 'apr'">
+  <article class="card-article">
+    <a>
+      <div class="card-header" ng-click="cardCtrl.showCard(card)">
+        <div class="card-name">
+          <p>
+            <span class="glyphicon glyphicon-chevron-down" ng-show="cardCtrl.cardIsSet(card)"></span>
+            <span class="glyphicon glyphicon-chevron-right" ng-hide="cardCtrl.cardIsSet(card)"></span>
+            {{card.name}}
+          </p>
+        </div>
+        <div class="card-apr">
+          <p>{{card.apr}}% APR</p>
+        </div>
+      </div>
+    </a>
+    <div class="card-details-div" ng-show="cardCtrl.cardIsSet(card)">
+      <div class="card-image">
+        <img ng-src="img/{{card.code}}.png">
+      </div>
+      <div class="card-cashback">
+        <p class="cashback-text">Cashback</p>
+        <div class="cashback-value">
+          <p>£{{card.cashback | number:2}}</p>
+        </div>
+      </div>
+      <hr class="line">
+      <div class="card-info">
+        {{card.information}}
+      </div>
+    </div>
+  </article>
+</section>
