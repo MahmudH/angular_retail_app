@@ -1,0 +1,10 @@
+<section ng-repeat="cart in cartCtrl.cart | orderBy: 'category'" class="">
+  <div>
+    {{cart}}
+    <button ng-click="cartCtrl.removeFromCart(cart)">Remove</button>
+  </div>
+</section>
+
+<div>
+  {{cartCtrl.cart}}
+</div>

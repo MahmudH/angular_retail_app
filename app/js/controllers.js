@@ -2,20 +2,58 @@
 
 /* Controllers */
 
-storeApp.controller('productsCtrl', ['$http', function($http) {
+storeApp.controller('CartController', ['Products', function(Products) {
 
   var self = this;
+  self.cart = [];
+  self.totalPrice = 0;
 
-  $http.get('products/products.json').success(function(data) {
+
+  self.products = {};
+  Products.get('products/products.json').success(function(data) {
     self.products = data;
   });
 
-  // self.setCard = function(card){
-  //   self.card === card ? self.card = false : self.card = card;
-  // };
-  //
-  // self.selectedCard = function(card){
-  //   return self.card === card;
-  // };
+  self.addToCart = function (product) {
+    var found = false;
+    self.cart.length === 0 ? self._emptyIsBasket(product) : self._addToBasket(product, found);
+  };
+
+  self.removeFromCart = function(index){
+    self.cart.splice(index, 1);
+  };
+
+  self._addToBasket = function(product, check){
+    for(var i=0; i < self.cart.length; i++){
+      if(self.cart[i][0] == product.name){
+        self.cart[i][1]++;
+        self._decreaseProductQuantity(product);
+        check = true;
+      }
+    }
+    if(!check){
+      self.cart.push([product.name,1]);
+      product.quantity--;
+    }
+    self._increaseTotalPrice(product);
+  };
+
+  self._emptyIsBasket = function(product){
+    self.cart.push([product.name,1]);
+    self._decreaseProductQuantity(product);
+    self._increaseTotalPrice(product);
+  };
+
+  self._decreaseProductQuantity = function(product){
+    product.quantity--;
+  };
+
+  self._increaseProductQuantity = function(product){
+    product.quantity++;
+  };
+
+  self._increaseTotalPrice = function(product){
+    self.totalPrice += product.price;
+  };
 
 }]);

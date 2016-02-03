@@ -1,0 +1,16 @@
+<section ng-repeat="product in cartCtrl.products | orderBy: 'category'" class="">
+  <div>
+    {{product.name}}
+    {{product.quantity}}
+    {{product.price}}
+    <button ng-click="cartCtrl.addToCart(product)">Add to Basket</button>
+  </div>
+</section>
+
+<div>
+  {{cartCtrl.cart}}
+</div>
+
+<div>
+  {{cartCtrl.totalPrice}}
+</div>
