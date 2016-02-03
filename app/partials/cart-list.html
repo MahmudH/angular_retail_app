@@ -8,3 +8,15 @@
 <div>
   {{cartCtrl.cart}}
 </div>
+
+<section ng-controller="DiscountController as discountCtrl">
+  <div>
+    <input type="text" ng-model="code" required>
+    <button ng-click="discountCtrl.checkDiscount(code)">Apply Discount</button>
+  </div>
+  {{discountCtrl.discounts}}
+
+  <div>
+
+  </div>
+</section>
