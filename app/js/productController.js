@@ -10,13 +10,9 @@ storeApp.controller('CartController', ['Products', '$rootScope', function(Produc
   self.products = {};
   self.discounts = {};
 
-  Products.get('products/products.json').success(function(data) {
+  Products.get('products/productlist.json').success(function(data) {
     self.products = data;
   });
-
-  // Discounts.get('products/discounts.json').success(function(data) {
-  //   self.discounts = data;
-  // });
 
   self.addToCart = function (product) {
     var found = false;
@@ -25,13 +21,6 @@ storeApp.controller('CartController', ['Products', '$rootScope', function(Produc
 
   self.removeFromCart = function(index){
     self.cart.splice(index, 1);
-  };
-
-  self.checkDiscount = function(code){
-    console.log(code);
-    // self.discounts.forEach(function(){
-    //
-    // });
   };
 
   self._addToBasket = function(product, check){

@@ -1,17 +1,11 @@
-
 <section ng-repeat="product in cartCtrl.products | orderBy: 'category'" class="">
-  <div>
-    {{product.name}}
-    {{product.quantity}}
-    {{product.price}}
-    <button ng-click="cartCtrl.addToCart(product)">Add to Basket</button>
+  <div class="col-md-6 column productbox">
+    <!-- <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive"> -->
+    <img ng-src="img/products/08.jpeg" class="img-responsive">
+    <div class="producttitle">{{product.name}}</div>
+    <div class="productprice"><div class="pull-right"><button class="btn btn-danger btn-sm" ng-click="cartCtrl.addToCart(product)">BUY</button></div>
+    <div class="pricetext">{{product.price | currency:"£"}}</div></div>
+    There are {{product.quantity}} in stock.
+    <!-- <button class="btn btn-default" ng-click="cartCtrl.addToCart(product)">Add to Basket</button> -->
   </div>
 </section>
-
-<div>
-  {{cartCtrl.cart}}
-</div>
-
-<div>
-  {{totalPrice}}
-</div>

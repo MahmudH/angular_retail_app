@@ -1,20 +1,19 @@
 <section ng-repeat="cart in cartCtrl.cart | orderBy: 'category'" class="">
-  <div>
-    {{cart}}
-    <button ng-click="cartCtrl.removeFromCart(cart)">Remove</button>
+  <div class="col-md-6 column productbox">
+    <!-- <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive"> -->
+    <!-- <img ng-src="img/products/08.jpeg" class="img-responsive"> -->
+    <div class="producttitle">{{cart[0]}}</div>
+    <div class="producttitle">Quantity: {{cart[1]}}</div>
+    <div class="productprice"><div class="pull-right"><button class="btn btn-danger btn-sm" ng-click="cartCtrl.removeFromCart(cart)">Remove</button></div>
+    <div class="pricetext">{{product.price | currency:"£"}}</div></div>
   </div>
 </section>
-
-<div>
-  {{cartCtrl.cart}}
-</div>
 
 <section ng-controller="DiscountController as discountCtrl">
   <div>
     <input type="text" ng-model="code" required>
     <button ng-click="discountCtrl.checkDiscount(code, cartCtrl.cart)">Apply Discount</button>
   </div>
-  {{discountCtrl.discounts}}
 
   <div ng-show="discountCtrl.codeError">
     {{discountCtrl.codeMessage}}

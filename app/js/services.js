@@ -5,7 +5,7 @@ storeApp.factory('Products', ['$http',
     };
     return service
       function get () {
-        return $http.get('products/products.json');
+        return $http.get('products/productlist.json');
       }
     }
 ]);
