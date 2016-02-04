@@ -17,7 +17,7 @@ storeApp.factory('Discounts', ['$http',
     };
     return discountService
       function get () {
-        return $http.get('discounts/discounts.json');
+        return $http.get('discounts/discountcodes.json');
       }
     }
 ]);

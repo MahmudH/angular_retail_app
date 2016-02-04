@@ -1,3 +1,4 @@
+
 <section ng-repeat="product in cartCtrl.products | orderBy: 'category'" class="">
   <div>
     {{product.name}}
@@ -12,5 +13,5 @@
 </div>
 
 <div>
-  {{cartCtrl.totalPrice}}
+  {{totalPrice}}
 </div>

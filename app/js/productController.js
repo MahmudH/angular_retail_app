@@ -2,11 +2,11 @@
 
 /* Controllers */
 
-storeApp.controller('CartController', ['Products', function(Products) {
+storeApp.controller('CartController', ['Products', '$rootScope', function(Products, $rootScope) {
 
   var self = this;
   self.cart = [];
-  self.totalPrice = 0;
+  $rootScope.totalPrice = 0;
   self.products = {};
   self.discounts = {};
 
@@ -64,7 +64,7 @@ storeApp.controller('CartController', ['Products', function(Products) {
   };
 
   self._increaseTotalPrice = function(product){
-    self.totalPrice += product.price;
+    $rootScope.totalPrice += product.price;
   };
 
 }]);

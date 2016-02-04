@@ -1,0 +1,27 @@
+[
+  {
+	"code":"SUMMER5",
+	"discount":5,
+  "maxamount":0
+	},
+	{
+		"code":"SUMMER10",
+		"discount":10,
+    "maxamount":50
+	},
+  {
+  "code":"SUMMER15",
+  "discount":15,
+  "maxamount":75
+  },
+  {
+  "code":"HAPPYDAYS",
+  "discount":10,
+  "maxamount":50
+  },
+  {
+  "code":"DELOITTE",
+  "discount":15,
+  "maxamount":75
+  }
+]

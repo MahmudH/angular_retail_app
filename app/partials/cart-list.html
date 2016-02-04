@@ -12,11 +12,11 @@
 <section ng-controller="DiscountController as discountCtrl">
   <div>
     <input type="text" ng-model="code" required>
-    <button ng-click="discountCtrl.checkDiscount(code)">Apply Discount</button>
+    <button ng-click="discountCtrl.checkDiscount(code, cartCtrl.cart)">Apply Discount</button>
   </div>
   {{discountCtrl.discounts}}
 
-  <div>
-
+  <div ng-show="discountCtrl.codeError">
+    {{discountCtrl.codeMessage}}
   </div>
 </section>
