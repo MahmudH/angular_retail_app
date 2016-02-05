@@ -1,4 +1,4 @@
-# eCommerce website built in AngularJS
+# eCommerce website built in AngularJS and Bootstrap, including custom CSS.
 
 ```
 Installation instructions:
