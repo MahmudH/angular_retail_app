@@ -10,7 +10,7 @@ describe('storeApp', function() {
   describe('Product list view', function() {
 
     beforeEach(function() {
-      browser.get('app/index.html#/cards');
+      browser.get('app/index.html#/products');
     });
 
 

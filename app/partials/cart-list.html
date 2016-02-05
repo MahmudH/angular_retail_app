@@ -18,4 +18,8 @@
   <div ng-show="discountCtrl.codeError">
     {{discountCtrl.codeMessage}}
   </div>
+
+  <div class="producttitle">
+    Total price to pay for the items: {{totalPrice | currency:"£"}}
+  </div>
 </section>

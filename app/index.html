@@ -2,7 +2,7 @@
 <html lang="en" ng-app="storeApp">
   <head>
     <meta charset="utf-8">
-    <title>Compare The Market</title>
+    <title>Vim Clothing Store</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -33,7 +33,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/app/#/products">Products</a></li>
               <li><a href="/app/#/cart">Cart({{cartCtrl.cart.length}})</a></li>
-              <li><a href="#">Total Price: (£{{totalPrice}})</a></li>
+              <li><a href="#">Total Price: ({{totalPrice | currency:"£"}})</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
