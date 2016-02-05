@@ -1,4 +1,8 @@
-# eCommerce website built in AngularJS and Bootstrap, including custom CSS.
+# eCommerce web app built in AngularJS and Bootstrap, including custom CSS.
+
+At first I started off using Ruby on Rails to create some of the web app, using TDD. However, after much thought I believed as it is not a CRUD app, Rails was very heavyweight for this task so I switched to AngularJS.
+
+The repo can be found here [Incomplete Ruby on Rails Shopping Cart](https://github.com/MahmudH/shopping_cart).
 
 ```
 Installation instructions:
@@ -66,3 +70,5 @@ Please visit [Work](https://sleepy-basin-6579.herokuapp.com/home.html).
 * Integrate a payment API, such as PayPal as I did for my Makers Academy final project.
 * Create a native mobile app in Android or Swift. As I believe smartphone usage has increased and there is a demand for it.
 * Use a SQL or NoSQL database to store the products. I have worked with Firebase, MongoDB and Postgres.
+
+### Thank you for viewing my work.
