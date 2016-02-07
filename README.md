@@ -64,7 +64,7 @@ As a User I am alerted when I apply an invalid voucher to my shopping cart.
 If the discount code is invalid, the user is shown an error message below, likewise if the discount is valid, then they are shown a success message.
 ```
 
-Please visit [Work](https://sleepy-basin-6579.herokuapp.com/home.html).
+Please visit [Work](http://deloitte-digital.herokuapp.com/).
 
 ### Future developments
 * Integrate a payment API, such as PayPal as I did for my Makers Academy final project.
